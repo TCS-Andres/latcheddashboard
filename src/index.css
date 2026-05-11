@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 30% 99%;
+    --foreground: 20 14% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 14% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14% 12%;
+    --primary: 5 73% 73%;            /* coral / latched pink */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 20 10% 96%;
+    --secondary-foreground: 20 14% 12%;
+    --muted: 20 10% 96%;
+    --muted-foreground: 20 5% 45%;
+    --accent: 5 73% 95%;
+    --accent-foreground: 5 50% 30%;
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 20 10% 90%;
+    --input: 20 10% 90%;
+    --ring: 5 73% 73%;
+    --radius: 0.75rem;
+
+    --chart-1: 5 73% 65%;
+    --chart-2: 20 14% 30%;
+    --chart-3: 5 60% 80%;
+    --chart-4: 200 30% 55%;
+    --chart-5: 40 60% 60%;
+  }
+
+  .dark {
+    --background: 20 14% 8%;
+    --foreground: 30 20% 96%;
+    --card: 20 14% 11%;
+    --card-foreground: 30 20% 96%;
+    --popover: 20 14% 11%;
+    --popover-foreground: 30 20% 96%;
+    --primary: 5 73% 73%;
+    --primary-foreground: 20 14% 10%;
+    --secondary: 20 10% 18%;
+    --secondary-foreground: 30 20% 96%;
+    --muted: 20 10% 18%;
+    --muted-foreground: 20 5% 65%;
+    --accent: 5 40% 25%;
+    --accent-foreground: 5 73% 90%;
+    --destructive: 0 60% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 20 10% 22%;
+    --input: 20 10% 22%;
+    --ring: 5 73% 73%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-feature-settings: 'cv11', 'ss01';
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 {
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'DM Serif Display', Georgia, serif;
+    letter-spacing: -0.02em;
+  }
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 4px;
+  }
+}
